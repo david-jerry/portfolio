@@ -1,0 +1,72 @@
+{
+  "assets/android-chrome-144x144.png": "/static/bundles/assets/android-chrome-144x144.png",
+  "assets/android-chrome-192x192.png": "/static/bundles/assets/android-chrome-192x192.png",
+  "assets/android-chrome-256x256.png": "/static/bundles/assets/android-chrome-256x256.png",
+  "assets/android-chrome-36x36.png": "/static/bundles/assets/android-chrome-36x36.png",
+  "assets/android-chrome-384x384.png": "/static/bundles/assets/android-chrome-384x384.png",
+  "assets/android-chrome-48x48.png": "/static/bundles/assets/android-chrome-48x48.png",
+  "assets/android-chrome-512x512.png": "/static/bundles/assets/android-chrome-512x512.png",
+  "assets/android-chrome-72x72.png": "/static/bundles/assets/android-chrome-72x72.png",
+  "assets/android-chrome-96x96.png": "/static/bundles/assets/android-chrome-96x96.png",
+  "assets/apple-touch-icon-1024x1024.png": "/static/bundles/assets/apple-touch-icon-1024x1024.png",
+  "assets/apple-touch-icon-114x114.png": "/static/bundles/assets/apple-touch-icon-114x114.png",
+  "assets/apple-touch-icon-120x120.png": "/static/bundles/assets/apple-touch-icon-120x120.png",
+  "assets/apple-touch-icon-144x144.png": "/static/bundles/assets/apple-touch-icon-144x144.png",
+  "assets/apple-touch-icon-152x152.png": "/static/bundles/assets/apple-touch-icon-152x152.png",
+  "assets/apple-touch-icon-167x167.png": "/static/bundles/assets/apple-touch-icon-167x167.png",
+  "assets/apple-touch-icon-180x180.png": "/static/bundles/assets/apple-touch-icon-180x180.png",
+  "assets/apple-touch-icon-57x57.png": "/static/bundles/assets/apple-touch-icon-57x57.png",
+  "assets/apple-touch-icon-60x60.png": "/static/bundles/assets/apple-touch-icon-60x60.png",
+  "assets/apple-touch-icon-72x72.png": "/static/bundles/assets/apple-touch-icon-72x72.png",
+  "assets/apple-touch-icon-76x76.png": "/static/bundles/assets/apple-touch-icon-76x76.png",
+  "assets/apple-touch-icon-precomposed.png": "/static/bundles/assets/apple-touch-icon-precomposed.png",
+  "assets/apple-touch-icon.png": "/static/bundles/assets/apple-touch-icon.png",
+  "assets/browserconfig.xml": "/static/bundles/assets/browserconfig.xml",
+  "assets/favicon-16x16.png": "/static/bundles/assets/favicon-16x16.png",
+  "assets/favicon-32x32.png": "/static/bundles/assets/favicon-32x32.png",
+  "assets/favicon-48x48.png": "/static/bundles/assets/favicon-48x48.png",
+  "assets/favicon.ico": "/static/bundles/assets/favicon.ico",
+  "assets/firefox_app_128x128.png": "/static/bundles/assets/firefox_app_128x128.png",
+  "assets/firefox_app_512x512.png": "/static/bundles/assets/firefox_app_512x512.png",
+  "assets/firefox_app_60x60.png": "/static/bundles/assets/firefox_app_60x60.png",
+  "assets/manifest.json": "/static/bundles/assets/manifest.json",
+  "assets/manifest.webapp": "/static/bundles/assets/manifest.webapp",
+  "assets/mstile-144x144.png": "/static/bundles/assets/mstile-144x144.png",
+  "assets/mstile-150x150.png": "/static/bundles/assets/mstile-150x150.png",
+  "assets/mstile-310x150.png": "/static/bundles/assets/mstile-310x150.png",
+  "assets/mstile-310x310.png": "/static/bundles/assets/mstile-310x310.png",
+  "assets/mstile-70x70.png": "/static/bundles/assets/mstile-70x70.png",
+  "css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css": "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css",
+  "entrypoints": {
+    "project": {
+      "assets": {
+        "js": [
+          "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
+          "/static/bundles/js/project-8002598e33dd8b00e067.js"
+        ],
+        "css": [
+          "/static/bundles/css/project.10e5dfc43f64b80038d9.css"
+        ]
+      }
+    },
+    "vendors": {
+      "assets": {
+        "js": [
+          "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
+          "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js",
+          "/static/bundles/js/vendors-8002598e33dd8b00e067.js"
+        ],
+        "css": [
+          "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css"
+        ]
+      }
+    }
+  },
+  "index.html": "/static/bundles/index.html",
+  "js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js": "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js",
+  "project.css": "/static/bundles/css/project.10e5dfc43f64b80038d9.css",
+  "project.js": "/static/bundles/js/project-8002598e33dd8b00e067.js",
+  "runtime.js": "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
+  "sw.js": "/static/bundles/sw.js",
+  "vendors.js": "/static/bundles/js/vendors-8002598e33dd8b00e067.js"
+}

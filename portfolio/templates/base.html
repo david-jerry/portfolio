@@ -1,0 +1,194 @@
+{% load static i18n %}{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html x-data="Default"  x-init="Init" lang="{{ LANGUAGE_CODE }}">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>{{title|default:'Senior Python Developer'}}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}">
+  <meta name="keywords"
+    content="{{ keywords|default:'Jeremiah E. David, portfolio website, senior python developer, backend engineer in nigeria, software engineer, python mentorship program, fullstack mentoring program, interesting python blog post, educational programming tutorials, web programming tutorial, django developer, fastapi developer, alpinejs tutorial, htmx tutorial, programming mentor, david, darkcodr codes'}}">
+  <meta name="author" content="{{ author|default:'Jeremiah E. David'}}">
+  <meta name="format-detection" content="telephone=yes">
+  <meta name="csrf-token" content="{{csrf_token}}">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="Classification" content="Service">
+  <meta name="category" content="{{ category|default:'Blog, Portfolio, Service, Information Technology'}}">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+
+
+  <!-- Facebook OG Shared Link Information -->
+  <meta property="og:title" content="{{title|default:'Senior Python Developer'}}">
+  <meta property="og:site_name" content="Jeremiah David">
+  <meta property="og:description"
+    content="{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}">
+  <meta property="og:image"
+    content="{% block og_image %}{% static 'bundles/assets/favicon-48x48.png' %}{% endblock og_image %}">
+  <meta property="og:url" content="{{ request.build_absolute_uri }}">
+  <meta property="og:image:alt" content="{{og_image_alt|default:'jeremiah\'s unique logo'}}">
+  <meta property="og:type" content="information technology, services" />
+
+  <!-- Twitter TWITTER Shared Link Information -->
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <meta name="htmx-config" content='{"historyCacheSize": 15}'>
+
+
+  <link rel="shortcut icon" href="/static/bundles/assets/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/bundles/assets/favicon-16x16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/bundles/assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="48x48" href="/static/bundles/assets/favicon-48x48.png">
+  <link rel="manifest" href="/static/bundles/assets/manifest.json">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#fff">
+  <meta name="application-name" content="Jeremiah David">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/static/bundles/assets/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/static/bundles/assets/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/static/bundles/assets/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/static/bundles/assets/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/static/bundles/assets/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/static/bundles/assets/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/static/bundles/assets/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/bundles/assets/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/static/bundles/assets/apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/bundles/assets/apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="1024x1024" href="/static/bundles/assets/apple-touch-icon-1024x1024.png">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Jeremiah David">
+  <meta name="msapplication-TileColor" content="#ddd">
+  <meta name="msapplication-TileImage" content="/static/bundles/assets/mstile-144x144.png">
+  <meta name="msapplication-config" content="/static/bundles/assets/browserconfig.xml">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&&family=DynaPuff:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&family=Poiret+One&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,100;1,200&family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0&display=swap"
+    rel="stylesheet">
+
+  {% block css %}
+  <!-- Your stuff: Third-party CSS libraries go here -->
+
+  <!-- This file stores project-specific CSS -->
+  {% render_bundle 'project' 'css' %}
+  {% endblock %}
+  <!-- Le javascript
+    ================================================== -->
+  {# Placed at the top of the document so pages load faster with defer #}
+  {% block javascript %}
+  <script async>
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (
+      "darkMode" in localStorage
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  </script>
+
+  <!-- Vendor dependencies bundled as one file -->
+  {% render_bundle 'vendors' 'js' attrs='defer' %}
+
+  <!-- place project specific Javascript in this file -->
+  {% render_bundle 'project' 'js' attrs='defer' %}
+
+  {% endblock javascript %}
+
+</head>
+
+{% if not request.htmx%}
+<body hx-ext="debug, event-header" @scroll.window="navbarScrollEffect">
+
+
+  {% include "snippets/header.html" %}
+  {% endif %}
+
+  <main id="main" class="relative z-0 min-h-full flex flex-col flex-1 items-center justify-center">
+    <div>sample content</div>
+  </main>
+
+  {% if not request.htmx %}
+  {% include "snippets/footer.html" %}
+
+  {% block modal %}{% endblock modal %}
+
+  {% include "snippets/detail.html" %}
+  {% include "snippets/bottom_nav.html" %}
+  {% include "snippets/install_pwa.html" %}
+  {% include "snippets/accept_cookies.html" %}
+
+  <button @click="switchFullscreenMode"
+    class="fixed bottom-20 md:bottom-14 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+    <svg x-show.transition.in="!fullScreen" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+    </svg>
+    <svg x-show.transition.in="fullScreen" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+    </svg>
+  </button>
+
+  <button @click="enableDarkMode" x-show.transition.in="!darkMode" x-cloak
+    class="fixed bottom-28 md:bottom-24 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+    </svg>
+  </button>
+  <button @click="disableDarkMode" x-show.transition.in="darkMode" x-cloak
+    class="fixed bottom-28 md:bottom-24 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+    </svg>
+  </button>
+  {% endif %}
+
+
+  <script>
+    document.addEventListener("htmx:load", function (event) {
+      // Check if the event was triggered by an hx-get request
+      if (event.detail.trigger && event.detail.trigger.getAttribute("hx-get")) {
+        // Run your JavaScript code here
+        window.WEB_PUSH_CFG = {
+          AUTHENTICATED: "{{request.user.is_authenticated}}",
+          APPLICATION_SERVER_KEY: "{{APPLICATION_SERVER_KEY}}",
+          SEND_NOTIFICATION: location.host + "{% url 'send_notification' %}",
+          CREATE_WP_DEVICE: location.host + "{% url 'save_webpush_info' %}",
+        };
+      }
+    });
+
+    window.WEB_PUSH_CFG = {
+      AUTHENTICATED: "{{request.user.is_authenticated}}",
+      APPLICATION_SERVER_KEY: "{{APPLICATION_SERVER_KEY}}",
+      SEND_NOTIFICATION: location.host + "{% url 'send_notification' %}",
+      CREATE_WP_DEVICE: location.host + "{% url 'save_webpush_info' %}",
+    };
+  </script>
+
+  {% block inline_javascript %}
+  {% comment %}
+  Script tags with only code, no src (defer by default). To run
+  with a "defer" so that you run inline code:
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {/* Run whatever you want */ });
+  </script>
+  {% endcomment %}
+  {% endblock inline_javascript %}
+
+</body>
+
+</html>
