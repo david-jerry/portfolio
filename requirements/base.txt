@@ -66,3 +66,5 @@ django-taggit==3.1.0
 # list of countries and few iso data
 django-countries-plus==2.1.0
 mailtrap==2.0.0
+
+django-filter==22.1
