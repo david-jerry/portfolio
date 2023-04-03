@@ -283,3 +283,5 @@ webpack-stats.json
 !.envs/.local/
 portfolio/static/*
 !portfolio/static/bundles
+package.json
+postcss.config.js
