@@ -277,7 +277,7 @@ portfolio/media/
 
 .pytest_cache/
 portfolio/static/webpack_bundles/
-webpack-stats.json
+!webpack-stats.json
 .env
 .envs/*
 !.envs/.local/

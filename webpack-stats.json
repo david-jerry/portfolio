@@ -1,0 +1,535 @@
+{
+  "status": "done",
+  "assets": {
+    "assets/android-chrome-144x144.png": {
+      "name": "assets/android-chrome-144x144.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-144x144.png",
+      "publicPath": "/static/bundles/assets/android-chrome-144x144.png"
+    },
+    "assets/android-chrome-192x192.png": {
+      "name": "assets/android-chrome-192x192.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-192x192.png",
+      "publicPath": "/static/bundles/assets/android-chrome-192x192.png"
+    },
+    "assets/android-chrome-256x256.png": {
+      "name": "assets/android-chrome-256x256.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-256x256.png",
+      "publicPath": "/static/bundles/assets/android-chrome-256x256.png"
+    },
+    "assets/android-chrome-36x36.png": {
+      "name": "assets/android-chrome-36x36.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-36x36.png",
+      "publicPath": "/static/bundles/assets/android-chrome-36x36.png"
+    },
+    "assets/android-chrome-384x384.png": {
+      "name": "assets/android-chrome-384x384.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-384x384.png",
+      "publicPath": "/static/bundles/assets/android-chrome-384x384.png"
+    },
+    "assets/android-chrome-48x48.png": {
+      "name": "assets/android-chrome-48x48.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-48x48.png",
+      "publicPath": "/static/bundles/assets/android-chrome-48x48.png"
+    },
+    "assets/android-chrome-512x512.png": {
+      "name": "assets/android-chrome-512x512.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-512x512.png",
+      "publicPath": "/static/bundles/assets/android-chrome-512x512.png"
+    },
+    "assets/android-chrome-72x72.png": {
+      "name": "assets/android-chrome-72x72.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-72x72.png",
+      "publicPath": "/static/bundles/assets/android-chrome-72x72.png"
+    },
+    "assets/android-chrome-96x96.png": {
+      "name": "assets/android-chrome-96x96.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/android-chrome-96x96.png",
+      "publicPath": "/static/bundles/assets/android-chrome-96x96.png"
+    },
+    "assets/apple-touch-icon-1024x1024.png": {
+      "name": "assets/apple-touch-icon-1024x1024.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-1024x1024.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-1024x1024.png"
+    },
+    "assets/apple-touch-icon-114x114.png": {
+      "name": "assets/apple-touch-icon-114x114.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-114x114.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-114x114.png"
+    },
+    "assets/apple-touch-icon-120x120.png": {
+      "name": "assets/apple-touch-icon-120x120.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-120x120.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-120x120.png"
+    },
+    "assets/apple-touch-icon-144x144.png": {
+      "name": "assets/apple-touch-icon-144x144.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-144x144.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-144x144.png"
+    },
+    "assets/apple-touch-icon-152x152.png": {
+      "name": "assets/apple-touch-icon-152x152.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-152x152.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-152x152.png"
+    },
+    "assets/apple-touch-icon-167x167.png": {
+      "name": "assets/apple-touch-icon-167x167.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-167x167.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-167x167.png"
+    },
+    "assets/apple-touch-icon-180x180.png": {
+      "name": "assets/apple-touch-icon-180x180.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-180x180.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-180x180.png"
+    },
+    "assets/apple-touch-icon-57x57.png": {
+      "name": "assets/apple-touch-icon-57x57.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-57x57.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-57x57.png"
+    },
+    "assets/apple-touch-icon-60x60.png": {
+      "name": "assets/apple-touch-icon-60x60.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-60x60.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-60x60.png"
+    },
+    "assets/apple-touch-icon-72x72.png": {
+      "name": "assets/apple-touch-icon-72x72.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-72x72.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-72x72.png"
+    },
+    "assets/apple-touch-icon-76x76.png": {
+      "name": "assets/apple-touch-icon-76x76.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-76x76.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-76x76.png"
+    },
+    "assets/apple-touch-icon-precomposed.png": {
+      "name": "assets/apple-touch-icon-precomposed.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon-precomposed.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon-precomposed.png"
+    },
+    "assets/apple-touch-icon.png": {
+      "name": "assets/apple-touch-icon.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/apple-touch-icon.png",
+      "publicPath": "/static/bundles/assets/apple-touch-icon.png"
+    },
+    "assets/browserconfig.xml": {
+      "name": "assets/browserconfig.xml",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/browserconfig.xml",
+      "publicPath": "/static/bundles/assets/browserconfig.xml"
+    },
+    "assets/favicon-16x16.png": {
+      "name": "assets/favicon-16x16.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/favicon-16x16.png",
+      "publicPath": "/static/bundles/assets/favicon-16x16.png"
+    },
+    "assets/favicon-32x32.png": {
+      "name": "assets/favicon-32x32.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/favicon-32x32.png",
+      "publicPath": "/static/bundles/assets/favicon-32x32.png"
+    },
+    "assets/favicon-48x48.png": {
+      "name": "assets/favicon-48x48.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/favicon-48x48.png",
+      "publicPath": "/static/bundles/assets/favicon-48x48.png"
+    },
+    "assets/favicon.ico": {
+      "name": "assets/favicon.ico",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/favicon.ico",
+      "publicPath": "/static/bundles/assets/favicon.ico"
+    },
+    "assets/firefox_app_128x128.png": {
+      "name": "assets/firefox_app_128x128.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/firefox_app_128x128.png",
+      "publicPath": "/static/bundles/assets/firefox_app_128x128.png"
+    },
+    "assets/firefox_app_512x512.png": {
+      "name": "assets/firefox_app_512x512.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/firefox_app_512x512.png",
+      "publicPath": "/static/bundles/assets/firefox_app_512x512.png"
+    },
+    "assets/firefox_app_60x60.png": {
+      "name": "assets/firefox_app_60x60.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/firefox_app_60x60.png",
+      "publicPath": "/static/bundles/assets/firefox_app_60x60.png"
+    },
+    "assets/manifest.json": {
+      "name": "assets/manifest.json",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/manifest.json",
+      "publicPath": "/static/bundles/assets/manifest.json"
+    },
+    "assets/manifest.webapp": {
+      "name": "assets/manifest.webapp",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/manifest.webapp",
+      "publicPath": "/static/bundles/assets/manifest.webapp"
+    },
+    "assets/mstile-144x144.png": {
+      "name": "assets/mstile-144x144.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/mstile-144x144.png",
+      "publicPath": "/static/bundles/assets/mstile-144x144.png"
+    },
+    "assets/mstile-150x150.png": {
+      "name": "assets/mstile-150x150.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/mstile-150x150.png",
+      "publicPath": "/static/bundles/assets/mstile-150x150.png"
+    },
+    "assets/mstile-310x150.png": {
+      "name": "assets/mstile-310x150.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/mstile-310x150.png",
+      "publicPath": "/static/bundles/assets/mstile-310x150.png"
+    },
+    "assets/mstile-310x310.png": {
+      "name": "assets/mstile-310x310.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/mstile-310x310.png",
+      "publicPath": "/static/bundles/assets/mstile-310x310.png"
+    },
+    "assets/mstile-70x70.png": {
+      "name": "assets/mstile-70x70.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/assets/mstile-70x70.png",
+      "publicPath": "/static/bundles/assets/mstile-70x70.png"
+    },
+    "css/699.1d22b50c36e30d2e1e9d.css": {
+      "name": "css/699.1d22b50c36e30d2e1e9d.css",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/css/699.1d22b50c36e30d2e1e9d.css",
+      "publicPath": "/static/bundles/css/699.1d22b50c36e30d2e1e9d.css"
+    },
+    "css/699.1d22b50c36e30d2e1e9d.css.map": {
+      "name": "css/699.1d22b50c36e30d2e1e9d.css.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/css/699.1d22b50c36e30d2e1e9d.css.map",
+      "publicPath": "/static/bundles/css/699.1d22b50c36e30d2e1e9d.css.map"
+    },
+    "css/project.c55f85aa6421ceb1f492.css": {
+      "name": "css/project.c55f85aa6421ceb1f492.css",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/css/project.c55f85aa6421ceb1f492.css",
+      "publicPath": "/static/bundles/css/project.c55f85aa6421ceb1f492.css"
+    },
+    "css/project.c55f85aa6421ceb1f492.css.map": {
+      "name": "css/project.c55f85aa6421ceb1f492.css.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/css/project.c55f85aa6421ceb1f492.css.map",
+      "publicPath": "/static/bundles/css/project.c55f85aa6421ceb1f492.css.map"
+    },
+    "images/bg/dark-bg.jpeg": {
+      "name": "images/bg/dark-bg.jpeg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/bg/dark-bg.jpeg",
+      "publicPath": "/static/bundles/images/bg/dark-bg.jpeg"
+    },
+    "images/bg/light-bg.jpeg": {
+      "name": "images/bg/light-bg.jpeg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/bg/light-bg.jpeg",
+      "publicPath": "/static/bundles/images/bg/light-bg.jpeg"
+    },
+    "images/favicons/cookies.svg": {
+      "name": "images/favicons/cookies.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/cookies.svg",
+      "publicPath": "/static/bundles/images/favicons/cookies.svg"
+    },
+    "images/favicons/favicon.ico": {
+      "name": "images/favicons/favicon.ico",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/favicon.ico",
+      "publicPath": "/static/bundles/images/favicons/favicon.ico"
+    },
+    "images/favicons/hire-me-icon.svg": {
+      "name": "images/favicons/hire-me-icon.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/hire-me-icon.svg",
+      "publicPath": "/static/bundles/images/favicons/hire-me-icon.svg"
+    },
+    "images/favicons/logo-light.png": {
+      "name": "images/favicons/logo-light.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/logo-light.png",
+      "publicPath": "/static/bundles/images/favicons/logo-light.png"
+    },
+    "images/favicons/logo.png": {
+      "name": "images/favicons/logo.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/logo.png",
+      "publicPath": "/static/bundles/images/favicons/logo.png"
+    },
+    "images/favicons/privacy.svg": {
+      "name": "images/favicons/privacy.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/favicons/privacy.svg",
+      "publicPath": "/static/bundles/images/favicons/privacy.svg"
+    },
+    "images/fonts/facebook-light.svg": {
+      "name": "images/fonts/facebook-light.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/fonts/facebook-light.svg",
+      "publicPath": "/static/bundles/images/fonts/facebook-light.svg"
+    },
+    "images/fonts/instagram.svg": {
+      "name": "images/fonts/instagram.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/fonts/instagram.svg",
+      "publicPath": "/static/bundles/images/fonts/instagram.svg"
+    },
+    "images/fonts/linkedin-light.svg": {
+      "name": "images/fonts/linkedin-light.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/fonts/linkedin-light.svg",
+      "publicPath": "/static/bundles/images/fonts/linkedin-light.svg"
+    },
+    "images/fonts/skype-light.svg": {
+      "name": "images/fonts/skype-light.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/fonts/skype-light.svg",
+      "publicPath": "/static/bundles/images/fonts/skype-light.svg"
+    },
+    "images/fonts/twitter-light.svg": {
+      "name": "images/fonts/twitter-light.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/fonts/twitter-light.svg",
+      "publicPath": "/static/bundles/images/fonts/twitter-light.svg"
+    },
+    "images/logos/celery.svg": {
+      "name": "images/logos/celery.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/celery.svg",
+      "publicPath": "/static/bundles/images/logos/celery.svg"
+    },
+    "images/logos/css.svg": {
+      "name": "images/logos/css.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/css.svg",
+      "publicPath": "/static/bundles/images/logos/css.svg"
+    },
+    "images/logos/dartlang.svg": {
+      "name": "images/logos/dartlang.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/dartlang.svg",
+      "publicPath": "/static/bundles/images/logos/dartlang.svg"
+    },
+    "images/logos/docker.png": {
+      "name": "images/logos/docker.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/docker.png",
+      "publicPath": "/static/bundles/images/logos/docker.png"
+    },
+    "images/logos/docker.svg": {
+      "name": "images/logos/docker.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/docker.svg",
+      "publicPath": "/static/bundles/images/logos/docker.svg"
+    },
+    "images/logos/fastapi.svg": {
+      "name": "images/logos/fastapi.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/fastapi.svg",
+      "publicPath": "/static/bundles/images/logos/fastapi.svg"
+    },
+    "images/logos/figma.svg": {
+      "name": "images/logos/figma.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/figma.svg",
+      "publicPath": "/static/bundles/images/logos/figma.svg"
+    },
+    "images/logos/flutterio.svg": {
+      "name": "images/logos/flutterio.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/flutterio.svg",
+      "publicPath": "/static/bundles/images/logos/flutterio.svg"
+    },
+    "images/logos/heroku.svg": {
+      "name": "images/logos/heroku.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/heroku.svg",
+      "publicPath": "/static/bundles/images/logos/heroku.svg"
+    },
+    "images/logos/html5.svg": {
+      "name": "images/logos/html5.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/html5.svg",
+      "publicPath": "/static/bundles/images/logos/html5.svg"
+    },
+    "images/logos/Htmx.svg": {
+      "name": "images/logos/Htmx.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/Htmx.svg",
+      "publicPath": "/static/bundles/images/logos/Htmx.svg"
+    },
+    "images/logos/illustrator.svg": {
+      "name": "images/logos/illustrator.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/illustrator.svg",
+      "publicPath": "/static/bundles/images/logos/illustrator.svg"
+    },
+    "images/logos/javascript.svg": {
+      "name": "images/logos/javascript.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/javascript.svg",
+      "publicPath": "/static/bundles/images/logos/javascript.svg"
+    },
+    "images/logos/linux.svg": {
+      "name": "images/logos/linux.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/linux.svg",
+      "publicPath": "/static/bundles/images/logos/linux.svg"
+    },
+    "images/logos/mongodb.svg": {
+      "name": "images/logos/mongodb.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/mongodb.svg",
+      "publicPath": "/static/bundles/images/logos/mongodb.svg"
+    },
+    "images/logos/mysql.svg": {
+      "name": "images/logos/mysql.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/mysql.svg",
+      "publicPath": "/static/bundles/images/logos/mysql.svg"
+    },
+    "images/logos/ogpme.svg": {
+      "name": "images/logos/ogpme.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/ogpme.svg",
+      "publicPath": "/static/bundles/images/logos/ogpme.svg"
+    },
+    "images/logos/postgresql.svg": {
+      "name": "images/logos/postgresql.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/postgresql.svg",
+      "publicPath": "/static/bundles/images/logos/postgresql.svg"
+    },
+    "images/logos/postman.svg": {
+      "name": "images/logos/postman.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/postman.svg",
+      "publicPath": "/static/bundles/images/logos/postman.svg"
+    },
+    "images/logos/python.svg": {
+      "name": "images/logos/python.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/python.svg",
+      "publicPath": "/static/bundles/images/logos/python.svg"
+    },
+    "images/logos/redis.svg": {
+      "name": "images/logos/redis.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/redis.svg",
+      "publicPath": "/static/bundles/images/logos/redis.svg"
+    },
+    "images/logos/sentryio.svg": {
+      "name": "images/logos/sentryio.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/sentryio.svg",
+      "publicPath": "/static/bundles/images/logos/sentryio.svg"
+    },
+    "images/logos/tailwindcss.svg": {
+      "name": "images/logos/tailwindcss.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/tailwindcss.svg",
+      "publicPath": "/static/bundles/images/logos/tailwindcss.svg"
+    },
+    "images/logos/vuejs.svg": {
+      "name": "images/logos/vuejs.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/vuejs.svg",
+      "publicPath": "/static/bundles/images/logos/vuejs.svg"
+    },
+    "images/logos/webpack.svg": {
+      "name": "images/logos/webpack.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/logos/webpack.svg",
+      "publicPath": "/static/bundles/images/logos/webpack.svg"
+    },
+    "images/me/dark-me.png": {
+      "name": "images/me/dark-me.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/me/dark-me.png",
+      "publicPath": "/static/bundles/images/me/dark-me.png"
+    },
+    "images/me/light-me.png": {
+      "name": "images/me/light-me.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/me/light-me.png",
+      "publicPath": "/static/bundles/images/me/light-me.png"
+    },
+    "images/me/me.png": {
+      "name": "images/me/me.png",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/me/me.png",
+      "publicPath": "/static/bundles/images/me/me.png"
+    },
+    "images/patterns/bg-curve.svg": {
+      "name": "images/patterns/bg-curve.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/bg-curve.svg",
+      "publicPath": "/static/bundles/images/patterns/bg-curve.svg"
+    },
+    "images/patterns/bottom-curve.svg": {
+      "name": "images/patterns/bottom-curve.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/bottom-curve.svg",
+      "publicPath": "/static/bundles/images/patterns/bottom-curve.svg"
+    },
+    "images/patterns/dark-bottom-r-section-patterns.svg": {
+      "name": "images/patterns/dark-bottom-r-section-patterns.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/dark-bottom-r-section-patterns.svg",
+      "publicPath": "/static/bundles/images/patterns/dark-bottom-r-section-patterns.svg"
+    },
+    "images/patterns/dark-dots.svg": {
+      "name": "images/patterns/dark-dots.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/dark-dots.svg",
+      "publicPath": "/static/bundles/images/patterns/dark-dots.svg"
+    },
+    "images/patterns/dark-top-l-section-patterns.svg": {
+      "name": "images/patterns/dark-top-l-section-patterns.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/dark-top-l-section-patterns.svg",
+      "publicPath": "/static/bundles/images/patterns/dark-top-l-section-patterns.svg"
+    },
+    "images/patterns/light-bottom-r-section-patterns.svg": {
+      "name": "images/patterns/light-bottom-r-section-patterns.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/light-bottom-r-section-patterns.svg",
+      "publicPath": "/static/bundles/images/patterns/light-bottom-r-section-patterns.svg"
+    },
+    "images/patterns/light-circle-dots.svg": {
+      "name": "images/patterns/light-circle-dots.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/light-circle-dots.svg",
+      "publicPath": "/static/bundles/images/patterns/light-circle-dots.svg"
+    },
+    "images/patterns/light-dots.svg": {
+      "name": "images/patterns/light-dots.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/light-dots.svg",
+      "publicPath": "/static/bundles/images/patterns/light-dots.svg"
+    },
+    "images/patterns/light-square-dots.svg": {
+      "name": "images/patterns/light-square-dots.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/light-square-dots.svg",
+      "publicPath": "/static/bundles/images/patterns/light-square-dots.svg"
+    },
+    "images/patterns/light-top-l-section-patterns.svg": {
+      "name": "images/patterns/light-top-l-section-patterns.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/light-top-l-section-patterns.svg",
+      "publicPath": "/static/bundles/images/patterns/light-top-l-section-patterns.svg"
+    },
+    "images/patterns/simple-dots.svg": {
+      "name": "images/patterns/simple-dots.svg",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/images/patterns/simple-dots.svg",
+      "publicPath": "/static/bundles/images/patterns/simple-dots.svg"
+    },
+    "index.html": {
+      "name": "index.html",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/index.html",
+      "publicPath": "/static/bundles/index.html"
+    },
+    "js/699-ac77617db7f09c006d02.js": {
+      "name": "js/699-ac77617db7f09c006d02.js",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/699-ac77617db7f09c006d02.js",
+      "publicPath": "/static/bundles/js/699-ac77617db7f09c006d02.js"
+    },
+    "js/699-ac77617db7f09c006d02.js.LICENSE.txt": {
+      "name": "js/699-ac77617db7f09c006d02.js.LICENSE.txt",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/699-ac77617db7f09c006d02.js.LICENSE.txt",
+      "publicPath": "/static/bundles/js/699-ac77617db7f09c006d02.js.LICENSE.txt"
+    },
+    "js/699-ac77617db7f09c006d02.js.map": {
+      "name": "js/699-ac77617db7f09c006d02.js.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/699-ac77617db7f09c006d02.js.map",
+      "publicPath": "/static/bundles/js/699-ac77617db7f09c006d02.js.map"
+    },
+    "js/project-ac77617db7f09c006d02.js": {
+      "name": "js/project-ac77617db7f09c006d02.js",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/project-ac77617db7f09c006d02.js",
+      "publicPath": "/static/bundles/js/project-ac77617db7f09c006d02.js"
+    },
+    "js/project-ac77617db7f09c006d02.js.map": {
+      "name": "js/project-ac77617db7f09c006d02.js.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/project-ac77617db7f09c006d02.js.map",
+      "publicPath": "/static/bundles/js/project-ac77617db7f09c006d02.js.map"
+    },
+    "js/runtime-ac77617db7f09c006d02.js": {
+      "name": "js/runtime-ac77617db7f09c006d02.js",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/runtime-ac77617db7f09c006d02.js",
+      "publicPath": "/static/bundles/js/runtime-ac77617db7f09c006d02.js"
+    },
+    "js/runtime-ac77617db7f09c006d02.js.map": {
+      "name": "js/runtime-ac77617db7f09c006d02.js.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/js/runtime-ac77617db7f09c006d02.js.map",
+      "publicPath": "/static/bundles/js/runtime-ac77617db7f09c006d02.js.map"
+    },
+    "manifest.json": {
+      "name": "manifest.json",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/manifest.json",
+      "publicPath": "/static/bundles/manifest.json"
+    },
+    "sw.js": {
+      "name": "sw.js",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/sw.js",
+      "publicPath": "/static/bundles/sw.js"
+    },
+    "sw.js.map": {
+      "name": "sw.js.map",
+      "path": "/home/darkcodr/www/darkcodr/portfolio/portfolio/static/bundles/sw.js.map",
+      "publicPath": "/static/bundles/sw.js.map"
+    }
+  },
+  "chunks": {
+    "project": [
+      "js/runtime-ac77617db7f09c006d02.js",
+      "js/699-ac77617db7f09c006d02.js",
+      "css/699.1d22b50c36e30d2e1e9d.css",
+      "js/project-ac77617db7f09c006d02.js",
+      "css/project.c55f85aa6421ceb1f492.css"
+    ]
+  },
+  "publicPath": "/static/bundles/"
+}
