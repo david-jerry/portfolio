@@ -1,17 +1,78 @@
 import json
-from django.conf import settings
+import asyncio
 
+from django.conf import settings
 from django.contrib.auth import get_user_model
+from django.core.cache import cache
 from django.templatetags.static import static
 from django.views.decorators.csrf import csrf_exempt
 from django.http.response import HttpResponse, JsonResponse#, HttpResponsePermanentRedirect
 from django.views.decorators.http import require_GET, require_POST, require_http_methods
+from django.shortcuts import render
+from django.views.generic import DetailView, CreateView, UpdateView, ListView
 
 from webpush import send_user_notification
+from portfolio.experiences.models import Experiences
 
+from portfolio.projects.models import Project
 from portfolio.utils.logger import LOGGER
 
 User = get_user_model()
+
+
+# async def get_projects():
+#     projects = await asyncio.to_thread(Project.published.all_projects)
+#     project_tags = await asyncio.to_thread(Project.tags.all)
+#     return projects, project_tags
+
+
+class HomeView(ListView):
+    model = Project
+    template_name = "pages/home.html"
+    context_object_name = "objects"
+    page_kwarg = 'page'
+    paginate_by = 10
+    allow_empty = True
+
+    def get_queryset(self):
+        # LOGGER.info()
+        if cache.get('projects') is not None:
+            LOGGER.info(f"Cached Projects: {cache.get('projects')}")
+            return cache.get('projects') or []
+        else:
+            if self.request.user.is_staff:
+                b_projects = Project.objects.all()
+                LOGGER.info(f"Backend Projects: {b_projects}")
+                cache.set('projects', b_projects, timeout=60)
+                return b_projects or []
+            b_projects = Project.objects.filter(is_published=True)
+            LOGGER.info(f"Backend Projects: {b_projects}")
+            cache.set('projects', b_projects, timeout=60)
+            return b_projects or []
+
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        project_tags = cache.get('project_tags')
+        LOGGER.info(project_tags)
+        exp = cache.get('experiences')
+        if project_tags is None:
+            cache.set('project_tags', Project.tags.all(), timeout=5 * 60)
+            context['tags'] = Project.tags.all()
+        else:
+            context['tags'] = project_tags
+
+        if exp is None:
+            cache.set('experiences', Experiences.objects.all(), timeout=5 * 60)
+            context['experiences'] = Experiences.objects.all()
+        else:
+            context['experiences'] = Experiences.objects.all()
+
+        context['objects'] = self.get_queryset()
+        return context
+
+home = HomeView.as_view()
 
 
 @require_POST

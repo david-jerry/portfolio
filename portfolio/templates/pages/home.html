@@ -1,1 +1,102 @@
 {% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- introduction section about who i am and my interests -->
+<section class="relative md:h-[calc(100vh_-_95px)] w-full container mx-auto items-center flex flex-col md:space-y-0">
+  <div class="absolute -top-14 right-4 md:block hidden">
+    <img class="dark:flex hidden" src="{% static 'bundles/images/patterns/light-bottom-r-section-patterns.svg' %}" alt="pattern bottom right">
+    <img class="dark:hidden" src="{% static 'bundles/images/patterns/dark-bottom-r-section-patterns.svg' %}" alt="pattern bottom right">
+  </div>
+  <img src="{% static 'bundles/images/patterns/bottom-curve.svg' %}" alt="curve pattern" class="absolute bottom-0 right-0">
+  <img src="{% static 'bundles/images/patterns/bg-curve.svg' %}" alt="curve pattern" class="absolute top-24 md:top-1/3 left-6 -z-2">
+  <!-- <img src="{% static 'bundles/images/patterns/simple-dots.svg' %}" alt="dot pattern" class="absolute top-1/6 left-4 -z-2 hidden opacity-25 md:flex"> -->
+
+  <div class="relative flex md:flex-row flex-col md:space-x-36 space-y-12 md:space-y-0 w-full h-full">
+    <div class="relative md:pt-16 w-full max-w-md md:max-w-lg h-96 md:h-[480px] my-auto p-2 flex flex-col items-center justify-center">
+      <img class="hidden dark:block" src="{% static 'bundles/images/me/dark-me.png' %}" alt="jerry's photo">
+      <img class="dark:hidden block" src="{% static 'bundles/images/me/light-me.png' %}" alt="jerry's photo">
+    </div>
+
+    <div class="z-1 relative font-raleway space-y-6 w-full h-full md:w-2/5 flex flex-col justify-center">
+      <h1 class="text-3xl md:text-6xl text-center md:text-left">
+        <span class="font-normal">MY NAME IS </span><span class="font-black">JEREMIAH E DAVID...</span>
+      </h1>
+      <div class="rounded-lg w-fit py-1 px-2 gradient text-white">
+        <h4 class="text-s md:text-sm font-semibold font-poppins">A SENIOR PYTHON DEVELOPER | FLUTTER APP DEVELOPER | WEB DEVELOPER & DESIGNER</h4>
+      </div>
+
+      <!-- brief information about my expertise -->
+      <p class="text-sm">
+        I have extensive experience working with a variety of programming
+        languages and frameworks, including Python, Django, FastAPI, Scss,
+        HTMX, Flutter, Dart, TailwindCSS, AlpineJS, and VueJS.
+      </p>
+
+      <h2 class="text-base md:text-2xl pb-6">
+        Join me in building the technologies of tomorrow with Python today! <strong>Let's create something amazing together</strong>.
+      </h2>
+
+      <div class="flex items-center space-x-2">
+        <!-- hire me button -->
+        <button type="button" class="flex items-center justify-center space-x-3 w-full md:w-fit p-2 dark:bg-white dark:text-dark bg-dark font-bold text-light hover:shadow-md hover:scale-105 duration-500">
+          <span class="flex">Hire Me</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" fill="url(#paint0_linear_1_500)"/>
+            <path d="M9.0002 4.80011V6.72011H15.3266L4.2002 17.8465L5.5538 19.2001L16.6802 8.07371V14.4001H18.6002V4.80011H9.0002Z" fill="white"/>
+            <defs>
+            <linearGradient id="paint0_linear_1_500" x1="22.638" y1="16.8886" x2="1.86848" y2="16.8323" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#FFB147"/>
+            <stop offset="0.520264" stop-color="#FF6C63"/>
+            <stop offset="1" stop-color="#B86ADF"/>
+            </linearGradient>
+            </defs>
+          </svg>
+        </button>
+
+        <!-- view projects button -->
+        <button @click="scrollToElement('projects')" class="border-2 p-2 md:w-fit space-x-3 w-full justify-center flex items-center dark:border-light border-dark  font-bold dark:text-light text-dark hover:shadow-md hover:scale-105 duration-500">
+          <span class="flex">View Work</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 flex-none">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- my tech stacks -->
+<div class="container mx-auto flex items-center overflow-x-auto scrollbar-hide w-full space-x-3">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/html5.svg' %}" alt="html5 logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/css.svg' %}" alt="css logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/javascript.svg' %}" alt="javascript logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/Htmx.svg' %}" alt="htmx logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/python.svg' %}" alt="python logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/dartlang.svg' %}" alt="dartlang logo">
+  <img class="h-14 flex-none" src="{% static 'bundles/images/logos/docker.svg' %}" alt="docker logo">
+  <img class="h-24 flex-none" src="{% static 'bundles/images/logos/fastapi.svg' %}" alt="fastapi logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/flutterio.svg' %}" alt="flutter logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/celery.svg' %}" alt="celery logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/figma.svg' %}" alt="figma logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/heroku.svg' %}" alt="heroku logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/illustrator.svg' %}" alt="illustrator logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/linux.svg' %}" alt="linux logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/mongodb.svg' %}" alt="mongodb logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/postgresql.svg' %}" alt="postgresql logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/mysql.svg' %}" alt="mysql logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/postman.svg' %}" alt="postman logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/redis.svg' %}" alt="redis logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/sentryio.svg' %}" alt="sentry logo">
+  <img class="h-16 flex-none" src="{% static 'bundles/images/logos/tailwindcss.svg' %}" alt="tailwindcss logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/vuejs.svg' %}" alt="vuejs logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/webpack.svg' %}" alt="webpack logo">
+  <img class="h-8 flex-none" src="{% static 'bundles/images/logos/ogpme.svg' %}" alt="open graph logo">
+</div>
+
+{% include "experiences/list.html" with objects=experiences %}
+
+{% include "projects/list.html" with objects=objects tags=tags projects=project_count %}
+
+{% endblock content %}

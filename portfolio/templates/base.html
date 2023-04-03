@@ -6,31 +6,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{title|default:'Senior Python Developer'}}</title>
+  <title>{% block title %}{{title|default:'Senior Python Developer'}}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}">
+    content="{% block description %}{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}{% endblock %}">
   <meta name="keywords"
-    content="{{ keywords|default:'Jeremiah E. David, portfolio website, senior python developer, backend engineer in nigeria, software engineer, python mentorship program, fullstack mentoring program, interesting python blog post, educational programming tutorials, web programming tutorial, django developer, fastapi developer, alpinejs tutorial, htmx tutorial, programming mentor, david, darkcodr codes'}}">
-  <meta name="author" content="{{ author|default:'Jeremiah E. David'}}">
+    content="{% block keywords %}{{ keywords|default:'Jeremiah E. David, portfolio website, senior python developer, backend engineer in nigeria, software engineer, python mentorship program, fullstack mentoring program, interesting python blog post, educational programming tutorials, web programming tutorial, django developer, fastapi developer, alpinejs tutorial, htmx tutorial, programming mentor, david, darkcodr codes'}}{% endblock %}">
+  <meta name="author" content="{% block author %}{{ author|default:'Jeremiah E. David'}}{% endblock %}">
   <meta name="format-detection" content="telephone=yes">
   <meta name="csrf-token" content="{{csrf_token}}">
   <meta name="HandheldFriendly" content="true">
   <meta name="Classification" content="Service">
-  <meta name="category" content="{{ category|default:'Blog, Portfolio, Service, Information Technology'}}">
+  <meta name="category" content="{% block category %}{{ category|default:'Blog, Portfolio, Service, Information Technology'}}{% endblock %}">
   <meta name="coverage" content="Worldwide">
   <meta name="distribution" content="Global">
 
 
   <!-- Facebook OG Shared Link Information -->
-  <meta property="og:title" content="{{title|default:'Senior Python Developer'}}">
+  <meta property="og:title" content="{% block og_title %}{{title|default:'Senior Python Developer'}}{% endblock %}">
   <meta property="og:site_name" content="Jeremiah David">
   <meta property="og:description"
-    content="{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}">
+    content="{% block og_description %}{{ description|default:'Hello, my name is Jeremiah David and I am a Senior Python Developer with 4+ years of experience. I am passionate about using technology to solve complex problems and have a keen interest in developing efficient and scalable solutions.'}}{% endblock %}">
   <meta property="og:image"
     content="{% block og_image %}{% static 'bundles/assets/favicon-48x48.png' %}{% endblock og_image %}">
-  <meta property="og:url" content="{{ request.build_absolute_uri }}">
-  <meta property="og:image:alt" content="{{og_image_alt|default:'jeremiah\'s unique logo'}}">
+  <meta property="og:url" content="{% block og_request %}{{ request.build_absolute_uri }}{% endblock %}">
+  <meta property="og:image:alt" content="{% block og_image_alt %}{{og_image_alt|default:'jeremiah\'s unique logo'}}{% endblock %}">
   <meta property="og:type" content="information technology, services" />
 
   <!-- Twitter TWITTER Shared Link Information -->
@@ -93,8 +93,8 @@
     }
   </script>
 
-  <!-- Vendor dependencies bundled as one file -->
-  {% render_bundle 'vendors' 'js' attrs='defer' %}
+  <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
   <!-- place project specific Javascript in this file -->
   {% render_bundle 'project' 'js' attrs='defer' %}
@@ -103,18 +103,25 @@
 
 </head>
 
-{% if not request.htmx%}
+{% if not request.htmx %}
 <body hx-ext="debug, event-header" @scroll.window="navbarScrollEffect">
-
+  <div class="-z-1 dark:hidden w-screen h-screen fixed top-0 left-0 right-0" style="background-image: url({% static 'bundles/images/bg/light-bg.jpeg' %});"></div>
+  <div class="-z-1 dark:block hidden w-screen h-screen fixed top-0 left-0 right-0" style="background-image: url({% static 'bundles/images/bg/dark-bg.jpeg' %});"></div>
 
   {% include "snippets/header.html" %}
   {% endif %}
 
-  <main id="main" class="relative z-0 min-h-full flex flex-col flex-1 items-center justify-center">
-    <div>sample content</div>
+  <!-- items-center justify-center -->
+  <!-- <progress x-show.transition.in="processingRequest" x-cloak class="z-[1000] fixed top-4 left-0 right-0 w-full container mx-auto h-1 rounded-full shadow" id="progress" max="100" value="0"><span id="progressLabel">0%</span></progress> -->
+  <main id="main" class="relative z-[2] min-h-full flex flex-col flex-1 pb-[3.5rem] md:pb-0 w-screen">
+
+    {% block content %}
+
+    {% endblock content %}
   </main>
 
   {% if not request.htmx %}
+
   {% include "snippets/footer.html" %}
 
   {% block modal %}{% endblock modal %}
@@ -122,38 +129,76 @@
   {% include "snippets/detail.html" %}
   {% include "snippets/bottom_nav.html" %}
   {% include "snippets/install_pwa.html" %}
+  {% include "snippets/inactive_screen.html" %}
   {% include "snippets/accept_cookies.html" %}
+  {% include "snippets/update_create.html" %}
 
-  <button @click="switchFullscreenMode"
-    class="fixed bottom-20 md:bottom-14 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
-    <svg x-show.transition.in="!fullScreen" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
-    </svg>
-    <svg x-show.transition.in="fullScreen" x-cloak xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
-    </svg>
-  </button>
 
-  <button @click="enableDarkMode" x-show.transition.in="!darkMode" x-cloak
-    class="fixed bottom-28 md:bottom-24 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
-    </svg>
-  </button>
-  <button @click="disableDarkMode" x-show.transition.in="darkMode" x-cloak
-    class="fixed bottom-28 md:bottom-24 right-4 rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-      stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-      <path stroke-linecap="round" stroke-linejoin="round"
-        d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
-    </svg>
-  </button>
+  <div @mousedown.outside="openFloatIcon = false" class="z-30 duration-500 transition ease-in-out w-fit h-fit fixed bottom-20 right-4 space-y-1 flex flex-col items-center">
+    <img title="open consent" x-show.transition.in="closeCookieModal && openFloatIcon" x-cloak src="{% static 'bundles/images/favicons/cookies.svg' %}" alt="cookie consent image" class="mx-auto hover:animate-spin-slow object-contain w-10 aspect-1 cursor-pointer" @click="closeCookieModal = !closeCookieModal">
+
+    <button title="subscribe to push notification" id="subscribeNotificationButton" class="group duration-500 transition ease-in-out hidden md:hidden rounded-full shadow-md bg-primary text-light p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 group-hover:animate-wiggle-slow">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0M3.124 7.5A8.969 8.969 0 015.292 3m13.416 0a8.969 8.969 0 012.168 4.5" />
+      </svg>
+    </button>
+
+    <button title="switch to fullscreen" @click="switchFullscreenMode" x-cloak x-show.transition.in="!fullScreen && openFloatIcon"
+      class="duration-500 transition ease-in-out rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+      </svg>
+    </button>
+    <button title="switch to fullscreen" @click="switchFullscreenMode" x-cloak x-show.transition.in="fullScreen && openFloatIcon"
+      class="duration-500 transition ease-in-out rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+      </svg>
+    </button>
+
+    <button title="enable/disable dark mode" @click="enableDarkMode" x-show.transition.in="!darkMode && openFloatIcon" x-cloak
+      class="duration-500 transition ease-in-out rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+      </svg>
+    </button>
+    <button title="enable/disable dark mode" @click="disableDarkMode" x-show.transition.in="darkMode && openFloatIcon" x-cloak
+      class="duration-500 transition ease-in-out rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+        stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+      </svg>
+    </button>
+
+    <button title="install progressive web app" @click="installPWA" x-show.transition.in="showInstallFloatIcon && openFloatIcon" x-cloak class="duration-500 transition ease-in-out rounded-full shadow-md bg-success text-white dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15M9 12l3 3m0 0l3-3m-3 3V2.25" />
+      </svg>
+    </button>
+
+    <button title="close floating icons" @click="openFloatIcon = false" x-show.transition.in="openFloatIcon" x-cloak
+    class="duration-500 transition ease-in-out rounded-full shadow-md bg-danger/50 text-dark dark:text-white p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    </button>
+
+    <button title="open floating icons" @click="openFloatIcon = true" x-show.transition.in="!openFloatIcon" x-cloak
+    class="duration-500 transition ease-in-out rounded-full shadow-md bg-dark dark:bg-light text-light dark:text-dark p-3">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 7.125C2.25 6.504 2.754 6 3.375 6h6c.621 0 1.125.504 1.125 1.125v3.75c0 .621-.504 1.125-1.125 1.125h-6a1.125 1.125 0 01-1.125-1.125v-3.75zM14.25 8.625c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v8.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-8.25zM3.75 16.125c0-.621.504-1.125 1.125-1.125h5.25c.621 0 1.125.504 1.125 1.125v2.25c0 .621-.504 1.125-1.125 1.125h-5.25a1.125 1.125 0 01-1.125-1.125v-2.25z" />
+      </svg>
+    </button>
+
+  </div>
+
   {% endif %}
 
 

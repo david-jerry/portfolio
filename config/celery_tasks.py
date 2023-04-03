@@ -5,6 +5,9 @@ from django.template.loader import get_template
 from django.templatetags.static import static
 
 from celery import shared_task
+from portfolio.utils.logger import LOGGER
+
+from portfolio.utils.processors import OptimizeImage
 
 logo = static("images/favicons/logo.png")
 
@@ -40,3 +43,17 @@ def send_html_email(subject: str, template: str, from_email: str, context: dict,
     if attachment is not None :
         mail.attach_file(attachment)
     mail.send()
+
+
+# @shared_task()
+# def optimize_image(image, name:str, h:int, w:int, rsize:bool):
+
+#     """Celery task to optimize image in a seperate thread to improve performance
+#     this is to be used in a django view or rest_api view.
+
+#     Args:
+#         image_path (bytes): the image path served from the view
+#     """
+#     LOGGER.info(image)
+#     OptimizeImage(image, name, size_h=h, size_w=w, resize=rsize)
+

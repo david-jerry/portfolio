@@ -14,7 +14,7 @@ from webpush.views import save_info
 
 from config.sitemaps import StaticViewSitemap
 
-from portfolio.core.views import send_notification, send_user_push_notification, service_worker, service_worker_map
+from portfolio.core.views import home, send_notification, send_user_push_notification, service_worker, service_worker_map
 
 
 sitemaps = {
@@ -22,17 +22,24 @@ sitemaps = {
 }
 
 urlpatterns = [
-    path("", TemplateView.as_view(template_name="pages/home.html"), name="home"),
+    path("", home, name="home"),
     path(
         "about/", TemplateView.as_view(template_name="pages/about.html"), name="about"
     ),
     # Django Admin, use {% url 'admin:index' %}
+    path("jet/", include("jet.urls", "jet")),  # Django JET URLS
+    path("jet/dashboard/", include("jet.dashboard.urls", "jet-dashboard")),
     path(settings.ADMIN_URL, admin.site.urls),
-    path(settings.ADMIN_DOC_URL, admin.site.urls),
+    path(settings.ADMIN_DOC_URL, include("django.contrib.admindocs.urls")),
+
     # User management
     path("users/", include("portfolio.users.urls", namespace="users")),
     path("accounts/", include("django.contrib.admindocs.urls")),
+
     # Your stuff: custom urls includes go here
+    path('projects/', include("portfolio.projects.urls", namespace="projects")),
+    path('experiences/', include("portfolio.experiences.urls", namespace="experiences")),
+    path('blog/', include("portfolio.blog.urls", namespace="blog")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development
@@ -71,6 +78,12 @@ urlpatterns += [
 
 # API URLS
 urlpatterns += [
+    # API base url
+    path(
+        "rest-auth/password/reset/confirm/<str:uidb64>/<str:token>/",
+        TemplateView.as_view(template_name="account/password_reset_from_key.html"),
+        name="password_reset_confirm",
+    ),
     # API base url
     path("api/", include("config.api_router")),
     # DRF auth token

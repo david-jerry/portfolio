@@ -71,8 +71,12 @@ DJANGO_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
+
+    "rest_framework",
+    "rest_framework.authtoken",
     "dj_rest_auth",
     "dj_rest_auth.registration",
+
     "django.contrib.sites",
     "django.contrib.sitemaps",
     "django.contrib.messages",
@@ -86,6 +90,7 @@ THIRD_PARTY_APPS = [
     'widget_tweaks',
     "crispy_forms",
     "crispy_tailwind",
+
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
@@ -98,8 +103,6 @@ THIRD_PARTY_APPS = [
     "easy_select2",
 
     "django_celery_beat",
-    "rest_framework",
-    "rest_framework.authtoken",
     "corsheaders",
     "drf_spectacular",
     "webpack_loader",
@@ -118,6 +121,9 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "portfolio.core",
     "portfolio.users",
+    "portfolio.projects",
+    "portfolio.experiences",
+    "portfolio.blog",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -186,6 +192,9 @@ MIDDLEWARE = [
 
     # ip middleware
     "portfolio.users.middleware.UserIpAddressMiddleware",
+
+    # add auth token to every request header
+    "portfolio.users.middleware.TokenMiddleware",
 
     # htmx middleware
     "django_htmx.middleware.HtmxMiddleware",

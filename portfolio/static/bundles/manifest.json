@@ -36,37 +36,78 @@
   "assets/mstile-310x150.png": "/static/bundles/assets/mstile-310x150.png",
   "assets/mstile-310x310.png": "/static/bundles/assets/mstile-310x310.png",
   "assets/mstile-70x70.png": "/static/bundles/assets/mstile-70x70.png",
-  "css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css": "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css",
+  "css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38.5695f9812719b2efeb14.css": "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38.5695f9812719b2efeb14.css",
   "entrypoints": {
     "project": {
       "assets": {
         "js": [
-          "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
-          "/static/bundles/js/project-8002598e33dd8b00e067.js"
+          "/static/bundles/js/runtime-ffc473abd78f9309e3e6.js",
+          "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38-ffc473abd78f9309e3e6.js",
+          "/static/bundles/js/project-ffc473abd78f9309e3e6.js"
         ],
         "css": [
-          "/static/bundles/css/project.10e5dfc43f64b80038d9.css"
-        ]
-      }
-    },
-    "vendors": {
-      "assets": {
-        "js": [
-          "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
-          "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js",
-          "/static/bundles/js/vendors-8002598e33dd8b00e067.js"
-        ],
-        "css": [
-          "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0.c263e9e9966e571b4bc0.css"
+          "/static/bundles/css/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38.5695f9812719b2efeb14.css",
+          "/static/bundles/css/project.7c6966bf8b05c4bf1250.css"
         ]
       }
     }
   },
+  "images/bg/dark-bg.jpeg": "/static/bundles/images/bg/dark-bg.jpeg",
+  "images/bg/light-bg.jpeg": "/static/bundles/images/bg/light-bg.jpeg",
+  "images/favicons/cookies.svg": "/static/bundles/images/favicons/cookies.svg",
+  "images/favicons/favicon.ico": "/static/bundles/images/favicons/favicon.ico",
+  "images/favicons/hire-me-icon.svg": "/static/bundles/images/favicons/hire-me-icon.svg",
+  "images/favicons/logo-light.png": "/static/bundles/images/favicons/logo-light.png",
+  "images/favicons/logo.png": "/static/bundles/images/favicons/logo.png",
+  "images/favicons/privacy.svg": "/static/bundles/images/favicons/privacy.svg",
+  "images/fonts/facebook-light.svg": "/static/bundles/images/fonts/facebook-light.svg",
+  "images/fonts/instagram.svg": "/static/bundles/images/fonts/instagram.svg",
+  "images/fonts/linkedin-light.svg": "/static/bundles/images/fonts/linkedin-light.svg",
+  "images/fonts/skype-light.svg": "/static/bundles/images/fonts/skype-light.svg",
+  "images/fonts/twitter-light.svg": "/static/bundles/images/fonts/twitter-light.svg",
+  "images/logos/Htmx.svg": "/static/bundles/images/logos/Htmx.svg",
+  "images/logos/celery.svg": "/static/bundles/images/logos/celery.svg",
+  "images/logos/css.svg": "/static/bundles/images/logos/css.svg",
+  "images/logos/dartlang.svg": "/static/bundles/images/logos/dartlang.svg",
+  "images/logos/docker.png": "/static/bundles/images/logos/docker.png",
+  "images/logos/docker.svg": "/static/bundles/images/logos/docker.svg",
+  "images/logos/fastapi.svg": "/static/bundles/images/logos/fastapi.svg",
+  "images/logos/figma.svg": "/static/bundles/images/logos/figma.svg",
+  "images/logos/flutterio.svg": "/static/bundles/images/logos/flutterio.svg",
+  "images/logos/heroku.svg": "/static/bundles/images/logos/heroku.svg",
+  "images/logos/html5.svg": "/static/bundles/images/logos/html5.svg",
+  "images/logos/illustrator.svg": "/static/bundles/images/logos/illustrator.svg",
+  "images/logos/javascript.svg": "/static/bundles/images/logos/javascript.svg",
+  "images/logos/linux.svg": "/static/bundles/images/logos/linux.svg",
+  "images/logos/mongodb.svg": "/static/bundles/images/logos/mongodb.svg",
+  "images/logos/mysql.svg": "/static/bundles/images/logos/mysql.svg",
+  "images/logos/ogpme.svg": "/static/bundles/images/logos/ogpme.svg",
+  "images/logos/postgresql.svg": "/static/bundles/images/logos/postgresql.svg",
+  "images/logos/postman.svg": "/static/bundles/images/logos/postman.svg",
+  "images/logos/python.svg": "/static/bundles/images/logos/python.svg",
+  "images/logos/redis.svg": "/static/bundles/images/logos/redis.svg",
+  "images/logos/sentryio.svg": "/static/bundles/images/logos/sentryio.svg",
+  "images/logos/tailwindcss.svg": "/static/bundles/images/logos/tailwindcss.svg",
+  "images/logos/vuejs.svg": "/static/bundles/images/logos/vuejs.svg",
+  "images/logos/webpack.svg": "/static/bundles/images/logos/webpack.svg",
+  "images/me/dark-me.png": "/static/bundles/images/me/dark-me.png",
+  "images/me/light-me.png": "/static/bundles/images/me/light-me.png",
+  "images/me/me.png": "/static/bundles/images/me/me.png",
+  "images/patterns/bg-curve.svg": "/static/bundles/images/patterns/bg-curve.svg",
+  "images/patterns/bottom-curve.svg": "/static/bundles/images/patterns/bottom-curve.svg",
+  "images/patterns/dark-bottom-r-section-patterns.svg": "/static/bundles/images/patterns/dark-bottom-r-section-patterns.svg",
+  "images/patterns/dark-dots.svg": "/static/bundles/images/patterns/dark-dots.svg",
+  "images/patterns/dark-top-l-section-patterns.svg": "/static/bundles/images/patterns/dark-top-l-section-patterns.svg",
+  "images/patterns/light-bottom-r-section-patterns.svg": "/static/bundles/images/patterns/light-bottom-r-section-patterns.svg",
+  "images/patterns/light-circle-dots.svg": "/static/bundles/images/patterns/light-circle-dots.svg",
+  "images/patterns/light-dots.svg": "/static/bundles/images/patterns/light-dots.svg",
+  "images/patterns/light-square-dots.svg": "/static/bundles/images/patterns/light-square-dots.svg",
+  "images/patterns/light-top-l-section-patterns.svg": "/static/bundles/images/patterns/light-top-l-section-patterns.svg",
+  "images/patterns/simple-dots.svg": "/static/bundles/images/patterns/simple-dots.svg",
   "index.html": "/static/bundles/index.html",
-  "js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js": "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_lottiefiles_lottie-pl-c2aee0-8002598e33dd8b00e067.js",
-  "project.css": "/static/bundles/css/project.10e5dfc43f64b80038d9.css",
-  "project.js": "/static/bundles/js/project-8002598e33dd8b00e067.js",
-  "runtime.js": "/static/bundles/js/runtime-8002598e33dd8b00e067.js",
-  "sw.js": "/static/bundles/sw.js",
-  "vendors.js": "/static/bundles/js/vendors-8002598e33dd8b00e067.js"
+  "js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38-ffc473abd78f9309e3e6.js": "/static/bundles/js/vendors-node_modules_alpinejs_intersect_dist_module_esm_js-node_modules_alpinejs_dist_module_-b1cb38-ffc473abd78f9309e3e6.js",
+  "project.css": "/static/bundles/css/project.7c6966bf8b05c4bf1250.css",
+  "project.js": "/static/bundles/js/project-ffc473abd78f9309e3e6.js",
+  "runtime.js": "/static/bundles/js/runtime-ffc473abd78f9309e3e6.js",
+  "sw.js": "/static/bundles/sw.js"
 }

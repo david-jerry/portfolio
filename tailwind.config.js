@@ -27,6 +27,9 @@ module.exports = {
         xs: "0.60rem",
         s: "0.65rem",
       },
+      boxShadow: {
+        '3xl': '0 -2px 5px 4px rgba(148,148,148,148.014)'
+      },
       fontFamily: {
         "poppins": ["'Poppins'", "sans-serif"],
         "p1": ["'Poiret One'", "cursive"],

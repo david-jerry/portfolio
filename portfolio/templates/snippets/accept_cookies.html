@@ -1,0 +1,122 @@
+{% load static %}
+
+<div @mousedown.outside="viewCookiesList = false" x-cloak x-show.transition.in="!closeCookieModal" class="z-50 group fixed bottom-20 md:bottom-0 left-0 md:left-4 w-full md:max-w-sm backdrop-blur-sm bg-dark/70 dark:bg-light/70 text-white dark:text-dark rounded-xl md:rounded-b-none md:rounded-t-xl">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute top-3 right-3 cursor-pointer" @click="closeCookieModal = true">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+  </svg>
+
+  <div class="py-4 px-10 max-w-7xl mx-auto flex flex-col justify-between items-center space-y-4">
+    <div>
+      <img src="{% static 'bundles/images/favicons/cookies.svg' %}" alt="cookie consent image" class="mx-auto group-hover:animate-spin-slow object-contain w-1/3 aspect-1">
+    </div>
+    <h4 class="flex text-xl md:text-2xl text-center font-bold">Do you give me consent to use your data?</h4>
+    <!-- <p class="flex text-sm md:text-base text-justify">My website uses cookies and other third party solutions to ensure that your experience while navigating it's pages are struggle free and very enjoyable.</p> -->
+    <!-- <p class="flex text-sm md:text-base text-justify">Dismissing this without choosing anything automatically prevents you from enjoying certain benefits from using our site. Only necessary cookies are enabled</p> -->
+    <p class="flex text-sm md:text-base text-justify">
+      My website uses cookies, and local storage for performance
+      and marketing purposes. We use our own cookies and some from third parties.
+    </p>
+    <p class="flex text-sm md:text-base text-justify">
+      If you opted to accept any non-essential cookies, you can change or
+      customize your selection at any time by changing the boxes in the consent preference.
+    </p>
+    <p class="flex text-sm md:text-base text-justify">
+      To learn more about our privacy practices, please see our
+    </p>
+    <a href="/privacy/" class="dark:text-warning text-secondary">Privacy Policy.</a>
+  </div>
+
+  <div class="grid grid-cols-2">
+
+    <!-- view all cokies and accept or decline them -->
+    <a href="javascript:;" class="text-light duration-300 ease-in-out font-bold text-center gradient-btn py-3 rounded-bl-xl md:rounded-none" @click="viewCookiesList = !viewCookiesList">
+      <span>Consent Preference</span>
+    </a>
+
+    <!-- accept all cookies button -->
+    <a href="javascript:;" class="text-white hover:text-warning duration-300 ease-in-out font-bold text-center bg-dark dark:bg-gray-600 py-3 rounded-br-xl md:rounded-none" @click="acceptAllPolicies">Consent All</a>
+  </div>
+
+  <div x-cloak x-show.transition.in="viewCookiesList" class="flex flex-col space-y-2 backdrop-blur-sm max-w-sm w-full h-fit max-h-full md:-right-full text-white dark:text-dark right-0 z-[60] absolute bottom-[50px] dark:bg-light/70 bg-dark/70 dark:border-dark border-light border-2 rounded-t-lg md:rounded-lg px-6 py-4">
+    <h4 class="flex text-lg md:text-xl text-center font-bold space-x-3 items-center">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 13.5V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 010 3m0-3a1.5 1.5 0 000 3m0 9.75V10.5" />
+      </svg>
+
+      <span class="block text-warning dark:text-dark font-bold">Consent Preference</span>
+    </h4>
+
+    <!-- acceptPrivacyPolicy
+    acceptCookiePolicy
+    acceptSocialSharePolicy
+    acceptSocialOAuthPolicy
+    acceptGPSPolicy
+    acceptNotificationsPolicy
+    acceptAdvertsPolicy -->
+
+
+    <div class="h-full overflow-y-auto scrollbar-thin">
+      <div>
+        <div class="flex items-center justify-between w-full">
+          <span class="block">Essential Cookies</span>
+          <label for="acceptNecessary"
+          @click="acceptNecessary = !acceptNecessary" class="w-fit bg-none relative flex justify-between items-center group p-2">
+            <input id="acceptNecessary" :checked="acceptNecessary" type="checkbox" class="focus:ring-0 focus:border-0 focus:outline-none checked:border-0 checked:outline-none checked:ring-0 absolute left-1/2 -translate-x-1/2 w-0 h-0 peer appearance-none rounded-full bg-none focus:bg-none checked:bg-none" />
+            <span class="w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+          </label>
+        </div>
+        <div class="text-s py-2">
+          Essential cookies are a type of cookie that are essential for the proper functioning of a website. They are also known as "strictly necessary cookies" or "essential cookies". These cookies are used to store information that is needed for a website to work properly, such as login credentials, shopping cart information, and language preferences. Without necessary cookies, some features of a website may not be available, and the website may not function as intended.
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between w-full">
+          <span class="block">Analytics & Statistics</span>
+          <label for="acceptAnalytic"
+          @click="acceptAnalytic = !acceptAnalytic" class="w-fit bg-none relative flex justify-between items-center group p-2">
+            <input id="acceptAnalytic" :checked="acceptNecessary" type="checkbox" class="focus:ring-0 focus:border-0 focus:outline-none checked:border-0 checked:outline-none checked:ring-0 absolute left-1/2 -translate-x-1/2 w-0 h-0 peer appearance-none rounded-full bg-none focus:bg-none checked:bg-none" />
+            <span class="w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+          </label>
+        </div>
+        <div class="text-s py-2">
+          My analytic cookies are used to analyze and measure website usage, such as which pages are visited most frequently, how long visitors stay on each page, and how visitors navigate through the site.
+          <br>
+          Analytical cookies help website owners understand how their website is being used and identify areas for improvement.
+        </div>
+      </div>
+
+      <div>
+        <div class="flex items-center justify-between w-full">
+          <span class="block">Marketing & Social</span>
+          <label for="acceptMarketing"
+          @click="acceptMarketing = !acceptMarketing" class="w-fit bg-none relative flex justify-between items-center group p-2">
+            <input id="acceptMarketing" :checked="acceptNecessary" type="checkbox" class="focus:ring-0 focus:border-0 focus:outline-none checked:border-0 checked:outline-none checked:ring-0 absolute left-1/2 -translate-x-1/2 w-0 h-0 peer appearance-none rounded-full bg-none checked:bg-none" />
+            <span class="w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+          </label>
+        </div>
+        <div class="text-s py-2">
+          My marketing cookies are small text files that are placed on your device when you visit us. These cookies are used by advertisers and marketers to track user behavior across the web and to deliver personalized ads based on the user's interests and preferences.
+          <br>
+          This information is then used to build a profile of the user's interests and behaviors, which can be used to deliver targeted advertising.
+        </div>
+      </div>
+
+
+      <div>
+        <div class="flex items-center justify-between w-full">
+          <span class="block">Personalization</span>
+          <label for="acceptFunctionality"
+          @click="acceptFunctionality = !acceptFunctionality" class="w-fit bg-none relative flex justify-between items-center group p-2">
+            <input id="acceptFunctionality" :checked="acceptNecessary" type="checkbox" class="focus:ring-0 focus:border-0 focus:outline-none checked:border-0 checked:outline-none checked:ring-0 absolute left-1/2 -translate-x-1/2 w-0 h-0 peer appearance-none rounded-full bg-none checked:bg-none" />
+            <span class="w-12 h-6 flex items-center flex-shrink-0 ml-4 p-1 bg-gray-300 rounded-full duration-300 ease-in-out peer-checked:bg-green-400 after:w-4 after:h-4 after:bg-white after:rounded-full after:shadow-md after:duration-300 peer-checked:after:translate-x-6"></span>
+          </label>
+        </div>
+        <div class="text-s py-2">
+          These items let the website remember choices you make (like user name, language, or region) and personalize features for you. For example, we may show you different content depending on which of our sites you’ve visited and content you’ve read.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

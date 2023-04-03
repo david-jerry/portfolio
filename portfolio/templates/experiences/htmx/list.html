@@ -1,0 +1,35 @@
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+  {% for exp in experiences %}
+  <div class="group cursor-pointer hover:scale-105 duration-500 hover:shadow-xl flex flex-col border-2 dark:bg-light dark:text-dark bg-dark text-light p-9">
+    <div class="space-y-1">
+      <h4 class="text-2xl font-bold">
+        {{exp.title}}
+      </h4>
+      <span class="flex text-s">{{exp.role}}</span>
+      <span class="uppercase text-s font-bold"> {{exp.started|date:"M Y"}} - {{exp.ended|date:"M Y"}} </span>
+    </div>
+
+    <p :class="{'line-clamp-none':read==={{exp.id}},'line-clamp-2':read!=={{exp.id}}}" class="line-clamp-3 text-sm min-w-none prose px-6 text-justify pt-4">
+      {{exp.content|safe}}
+    </p>
+
+    <div class="flex items-center space-x-2 text-s pt-5">
+      {% for tag in exp.tags.all %}
+      <button class="duration-300 ease-in-out p-2 flex-none flex items-center space-x-2">
+        <span class="flex font-semibold dark:group-hover:text-dark group-hover:text-light">{{tag.name}}</span>
+      </button>
+      {% endfor %}
+    </div>
+  </div>
+  {% empty %}
+  <div class="col-span-2 py-3">
+    <center>
+      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_3ltxm7jt.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </center>
+    <center>
+      There is no experience what so ever for this developer
+    </center>
+  </div>
+  {% endfor %}
+</div>
+

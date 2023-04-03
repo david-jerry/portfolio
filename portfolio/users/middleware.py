@@ -19,3 +19,10 @@ class UserIpAddressMiddleware(MiddlewareMixin):
         #     return response
         response = self.get_response(request)
         return response
+
+
+class TokenMiddleware(MiddlewareMixin):
+    def process_request(self, request):
+        if request.user.is_authenticated and request.method == "POST":
+            token = request.user.auth_token.key
+            request.META["Authorization"] = f"Token {token}"

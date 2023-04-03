@@ -1,0 +1,19 @@
+{% load static %}
+<p x-text="$store.isInactive"></p>
+<div x-show.transition.in="$store.isInactive" x-cloak class="z-50 inset-0 overflow-y-auto bg-dark/60 backdrop-blur-sm">
+  <div class="flex items-center justify-center min-h-screen">
+    <div class="relative backdrop-blur-sm rounded-lg w-80 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+      <center class="relative p-6 bg-white dark:bg-light">
+        <center class="py-3">
+          <img src="{% static 'bundles/images/favicons/privacy.svg' %}" alt="privacy screen icon" class="w-24 object-fit mx-auto">
+        </center>
+        <h3 class="text-lg font-medium mb-4 text-dark">Unlock the Screen?</h3>
+        <p class="text-gray-500 mb-6">We do this to prevent your account from being spied on easily.</p>
+        <div class="flex justify-center">
+          <button class="bg-gray-200 text-gray-700 rounded-full py-2 px-4 mr-2" @click="logout">Logout</button>
+          <button id="installButton" class="bg-dark/50 hover:bg-dark duration-300 text-white rounded-full py-2 px-4" @click="unlock">Unlock</button>
+        </div>
+      </center>
+    </div>
+  </div>
+</div>

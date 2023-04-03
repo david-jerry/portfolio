@@ -1,0 +1,29 @@
+{% for object in objects %}
+<div @click="openDetail('{{object.get_absolute_url}}')" hx-push-url="{{object.get_absolute_url}}" x-show.transition.in=" {% for tag in object.tags.all %} active ===  '{{tag.slug}}' || {% endfor %} active === 'all'" x-cloak class="w-full border-2 border-dark/30 dark:border-light/30 p-4 group flex flex-col items-start bg-dark text-light dark:bg-light dark:text-dark">
+  <div class="md:h-44 w-full overflow-hidden">
+    <img src="{{object.cover_image.url}}" alt="{{object.title}} cover photo" class="w-full group-hover:scale-105 duration-500 object-cover shadow-2xl">
+  </div>
+  <div class="flex-grow flex-col flex p-4">
+    <h4 class="text-xl md:text-2xl font-bold">{{object.title}}</h4>
+    <div class="flex items-center space-x-3 overflow-x-auto scrollbar-hide py-2">
+      {% for t in object.tags.all %}
+      <span class="flex-none rounded-full p-1 text-xs font-bold dark:bg-dark bg-light text-dark dark:text-light">{{t.name}}</span>
+      {% endfor %}
+    </div>
+    <div class="prose text-sm text-justify dark:text-dark text-light line-clamp-3 pt-4 prose-strong:text-light dark:prose-strong:text-dark prose-p:text-light dark:prose-p:text-dark prose-code:text-light dark:prose-code:text-dark">
+      {{object.content|safe}}
+    </div>
+  </div>
+</div>
+{% empty %}
+<div class="md:col-span-4 text-center font-bold text-sm h-full flex flex-col items-center justify-center">
+  <div class="space-y-3">
+    <center>
+      <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_3ltxm7jt.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+    </center>
+    <center class="flex">
+      There is no blog post at the moment.Please check back later
+    </center>
+  </div>
+</div>
+{% endfor %}

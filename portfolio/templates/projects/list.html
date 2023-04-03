@@ -1,0 +1,52 @@
+{% load static %}
+
+<!-- section for the projects -->
+<section class="py-8 bg-dark dark:bg-light dark:text-dark text-light w-screen">
+  <div class="container mx-auto space-y-5">
+    <center class="text-light dark:text-dark font-bold text-2xl">
+      <h4 class="font-bold text-2xl">Works</h4>
+    </center>
+  </div>
+</section>
+
+<!-- my project section including UI designs -->
+<section id="projects" class="w-screen flex flex-col space-y-4 pt-14 md:pt-14 bg-light dark:bg-dark">
+  <div class="w-full container flex flex-col space-y-4 mx-auto">
+    <center class="relative">
+      <p class="text-sm md:text-base">
+        Check my commercial and non-commercial projects.
+      </p>
+      <p class="text-sm md:text-base">If you have any question feel free to ask me for more information.</p>
+    </center>
+    <div class="flex items-center space-x-3 upper font-bold">
+      <!-- add new project -->
+      <button @click="openUpdateCreate('{% url 'projects:create' %}')" class="text-s bg-dark text-light space-x-2 dark:bg-light dark:text-dark p-2 flex-none flex items-center">
+        <div class="gradient-btn p-1 text-dark">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-3 h-3">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+          </svg>
+        </div>
+        <span class="flex">Add New</span>
+      </button>
+
+      <div class="flex items-center space-x-3 overflow-auto scrollbar-thin text-s">
+        <!-- project filter -->
+        <button @click="active='all'" :class="{'border-2 bg-dark border-dark text-light dark:bg-light dark:border-light dark:text-dark':active==='all', 'border-2 border-dark hover:bg-dark text-dark hover:text-light dark:border-light dark:hover:bg-light dark:text-light dark:hover:text-dark':active!=='all'}" class="border-dark hover:bg-dark text-dark hover:text-light dark:border-light dark:hover:bg-light dark:text-light dark:hover:text-dark duration-300 ease-in-out p-2 runded-full flex-none flex items-center space-x-2">
+          <span class="flex font-semibold">All</span>
+          <span class="flex font-bold">( {{ objects.count|default:0 }} )</span>
+        </button>
+
+        {% for tag in tags %}
+        <button @click="active='{{tag.slug}}'" :class="{'border-2 bg-dark border-dark text-light dark:bg-light dark:border-light dark:text-dark':active==='{{tag.slug}}', 'border-2 border-dark hover:bg-dark text-dark hover:text-light dark:border-light dark:hover:bg-light dark:text-light dark:hover:text-dark':active!=='{{tag.slug}}'}" class="border-dark hover:bg-dark text-dark hover:text-light dark:border-light dark:hover:bg-light dark:text-light dark:hover:text-dark duration-300 ease-in-out p-2 runded-full flex-none flex items-center space-x-2">
+          <span class="flex font-semibold">{{tag.name}}</span>
+        </button>
+        {% endfor %}
+      </div>
+    </div>
+
+
+    {% include "projects/htmx/list.html" with objects=objects %}
+
+
+  </div>
+</section>

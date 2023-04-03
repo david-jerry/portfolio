@@ -5,6 +5,8 @@ import os
 import magic
 from django.core.exceptions import ValidationError
 
+
+
 # TODO: ADD validators for wav files to convert into three file formats, based on network speed serve them to players
 def validate_uploaded_image_extension(value):
     valid_mime_types = ["image/svg+xml", "image/jpeg", "image/png"]

@@ -1,0 +1,61 @@
+{% load static widget_tweaks %}
+
+<form x-data="Project" @submit.prevent="submitProject" x-ref="form" action="/api/projects/" method="post" enctype="multipart/form-data" class="relative backdrop-blur-sm rounded-lg w-80 md:w-2/4 bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+  {{form.media}}
+  <div class="p-6 bg-white dark:bg-light">
+    <h3 class="text-lg font-medium mb-4 text-dark">Add a New Project</h3>
+    <p class="text-sm text-gray-500 mb-6">Remember to detail your requirements in the job description.</p>
+
+    <div class="space-y-2">
+      <div>
+        <label for="{{ form.cover_image.id }}" class="text-s font-bold">{{ form.cover_image.label }}</label>
+        {% render_field form.cover_image class+="block cursor-pointer hover:shadow-xl placeholder:text-gray-400 placeholder:text-sm w-full rounded-xl text-dark overflow-hidden ring-0 border border-gray-200 duration-500 focus:border-dark focus:border focus:ring-dark focus:ring-1 outline-0 focus:outline-0" placeholder=form.cover_image.lable %}
+        {% if form.cover_image.help_text %}
+          <p class="text-info text-s italic">{{ form.cover_image.help_text }}</p>
+        {% endif %}
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+        <div>
+          <label for="{{ form.title.id }}" class="text-s font-bold">{{ form.title.label }}</label>
+          {% render_field form.title class+="block cursor-pointer hover:shadow-xl placeholder:text-gray-400 placeholder:text-sm w-full rounded-xl text-dark overflow-hidden ring-0 border border-gray-200 duration-500 focus:border-dark focus:border focus:ring-dark focus:ring-1 outline-0 focus:outline-0" placeholder=form.title.lable %}
+          {% if form.title.help_text %}
+            <p class="text-info text-s italic">{{ form.title.help_text }}</p>
+          {% endif %}
+        </div>
+        <div>
+          <label for="{{ form.tags.id }}" class="text-s font-bold">{{ form.tags.label }}</label>
+          {% render_field form.tags class+="block cursor-pointer hover:shadow-xl placeholder:text-gray-400 placeholder:text-sm w-full rounded-xl text-dark overflow-hidden ring-0 border border-gray-200 duration-500 focus:border-dark focus:border focus:ring-dark focus:ring-1 outline-0 focus:outline-0" placeholder=form.tags.lable %}
+          {% if form.tags.help_text %}
+            <p class="text-info text-s italic">{{ form.title.help_text }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      <div class="pt-2">
+        <label for="{{ form.content.id }}" class="text-s font-bold">{{ form.content.label }}</label>
+        {% render_field form.content class+="block cursor-pointer hover:shadow-xl placeholder:text-gray-400 placeholder:text-sm w-full rounded-xl text-dark overflow-hidden ring-0 border border-gray-200 duration-500 focus:border-dark focus:border focus:ring-dark focus:ring-1 outline-0 focus:outline-0" placeholder=form.content.lable %}
+        {% if form.content.help_text %}
+          <p class="text-info text-s italic">{{ form.content.help_text }}</p>
+        {% endif %}
+      </div>
+
+      <div>
+        <label for="{{ form.is_published.id }}" class="text-sm flex items-center space-x-2 font-bold">
+          {% render_field form.is_published class+="form-chckbox w-6 h-6 block cursor-pointer hover:shadow-xl placeholder:text-gray-400 placeholder:text-sm rounded-xl text-dark overflow-hidden ring-0 border border-gray-200 duration-500 focus:border-dark focus:border focus:ring-dark focus:ring-1 outline-0 focus:outline-0" placeholder=form.is_published.lable %}
+          <span class="flex"> {{ form.is_published.label }}</span>
+        </label>
+        {% if form.is_published.help_text %}
+          <p class="text-info text-s italic">{{ form.is_published.help_text }}</p>
+        {% endif %}
+      </div>
+    </div>
+
+
+
+    <div class="grid grid-cols-2 pt-5">
+      <button type="button" class="text-center uppercase flex bg-gray-200 text-dark py-2 px-4 mr-2  hover:scale-105" @click="updateOrCreate = false;">Reset</button>
+      <button type="submit" id="installButton" class="text-center uppercase flex bg-dark duration-300 text-white py-2 px-4 hover:scale-105">Install</button>
+    </div>
+  </div>
+</form>
