@@ -19,6 +19,7 @@
       <p class="text-sm md:text-base">If you have any question feel free to ask me for more information.</p>
     </center>
     <div class="flex items-center space-x-3 upper font-bold">
+      {% if request.user.is_staff %}
       <!-- add new project -->
       <button @click="openUpdateCreate('{% url 'projects:create' %}')" class="text-s bg-dark text-light space-x-2 dark:bg-light dark:text-dark p-2 flex-none flex items-center">
         <div class="gradient-btn p-1 text-dark">
@@ -28,6 +29,7 @@
         </div>
         <span class="flex">Add New</span>
       </button>
+      {% endif %}
 
       <div class="flex items-center space-x-3 overflow-auto scrollbar-thin text-s">
         <!-- project filter -->
