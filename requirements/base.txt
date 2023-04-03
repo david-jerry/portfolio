@@ -69,3 +69,4 @@ mailtrap==2.0.0
 
 django-filter==22.1
 django-tables2==2.4.1
+django-htmx==1.9.0
