@@ -184,4 +184,4 @@ else:
     PAYSTACK_PUBLIC_KEY = env("PAYSTACK_LIVE_PK")
 
 RECAPTCHA_PROXY = {'http': 'http://jeremiahedavid.space', 'https': 'https://jeremiahedavid.space',}
-RECAPTCHA_DOMAIN = env('www.jeremiahedavid.space')
+# RECAPTCHA_DOMAIN = '*.JEREMIAH'
